@@ -43,7 +43,7 @@ public class VisualizaMensajeTest {
     @Test
     public void testVisualizar() {
         System.out.println("visualizar");
-        Calculo cal = new Calculo(2, -1, "Correcto");
+        Calculo cal = new Calculo(2, 2, "Correcto");
         String expResult = "Correcto";
         String result = VisualizaMensaje.visualizar(cal);
         assertEquals(expResult, result);
