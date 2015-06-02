@@ -23,7 +23,7 @@ public class ExamenTest3evaluacion {
             Calculo calculo = new Calculo();
             calculo.setNumero1(numero1);
             calculo.setNumero2(numero2);
-
+            VisualizaMensaje.visualizar(calculo);
             System.out.println("El MCD de " + calculo.getNumero1() + " y "
                     + calculo.getNumero2() + " es: " + calculo.obtenerMCD(calculo.getNumero1(), calculo.getNumero2()));
 
@@ -36,5 +36,6 @@ public class ExamenTest3evaluacion {
             System.out.println("Error al introducir datos: "
                     + e.getMessage());
         }
+
     }
 }

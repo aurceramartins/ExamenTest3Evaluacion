@@ -13,9 +13,15 @@ public class Calculo {
 
     private int numero1;
     private int numero2;
-    private String mensajeResultado = "";
+    private String mensajeResultado;
 
     public Calculo() {
+    }
+
+    public Calculo(int numero1, int numero2, String mensajeResultado) {
+        this.numero1 = numero1;
+        this.numero2 = numero2;
+        this.mensajeResultado = mensajeResultado;
     }
 
     //setters
@@ -25,6 +31,7 @@ public class Calculo {
         //establecemos la propiedad "mensajeResultado" a "Error"
         if (numero < 0) {
             mensajeResultado = "Error, los números no pueden ser negativos";
+            this.setMensajeResultado(mensajeResultado);
         }
     }
 
@@ -34,6 +41,7 @@ public class Calculo {
         //establecemos la propiedad "mensajeResultado" a "Error"
         if (numero < 0) {
             mensajeResultado = "Error, los números no pueden ser negativos";
+            this.setMensajeResultado(mensajeResultado);
         }
     }
 
@@ -51,6 +59,10 @@ public class Calculo {
 
     public int getNumero2() {
         return numero2;
+    }
+
+    public void setMensajeResultado(String mensajeResultado) {
+        this.mensajeResultado = mensajeResultado;
     }
 
     //método para calcular el MCD
@@ -73,9 +85,11 @@ public class Calculo {
             } while (resto != 0);
 
             mensajeResultado = "Cálculo correcto";
+            this.setMensajeResultado(mensajeResultado);
             return numDiv2;
         } catch (Exception e) {
             mensajeResultado = "Error en cálculo de MCD: " + e.getMessage();
+            this.setMensajeResultado(mensajeResultado);
             return 0;
         }
     }
